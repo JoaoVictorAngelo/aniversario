@@ -1,0 +1,46 @@
+@use 'variaveis' as var;
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/fundohero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &__profile {
+        display: block;
+        margin: 0 auto;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 800;
+        text-align: center;
+        color: var.$textColor;
+    }
+
+    #contador {
+        color: var.$textColor;
+    }
+
+    @media (max-width: 640px){
+        padding: 40px 0;
+        
+        &__logo {
+            height: 40px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}

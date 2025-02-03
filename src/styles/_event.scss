@@ -1,0 +1,64 @@
+@use 'variaveis' as var;
+.event {
+    padding: 80px 0;
+
+    
+    &--piscina {
+        background-image: linear-gradient(var.$background-accent, var.$background-light);        
+    }
+
+    &--quadra {
+        background-image: linear-gradient(var.$background-light, var.$background-accent);        
+    }
+
+    &--bartender {
+        background-image: linear-gradient(var.$background-accent, var.$background-light);        
+    }
+
+    &--dj {
+        background-image: linear-gradient(var.$background-light, var.$background-main);        
+    }
+
+    &--imagem-left{
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__details {
+
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        
+        &__description {
+            line-height: 22px;
+        }
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    @media (max-width:640px) {
+        .container {
+            display: block;
+        }
+
+        &__details {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+}
